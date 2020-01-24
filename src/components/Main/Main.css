@@ -1,0 +1,42 @@
+.logo {
+    width: 6em;
+    height: 6em;
+    margin-top: 20vh;
+}
+
+.foreground {
+    padding: 2em;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.header-text {
+    font-size: 3em;
+    letter-spacing: 2em;
+    margin-left: 2em;
+    color: #385d77;
+    font-weight: 300;
+}
+
+.accent-text {
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+.small-text {
+    font-size: 0.8em;
+    color: #6f9dec;
+    font-weight: 300;
+}
+
+.header {
+    margin-top: 1em;
+}
+
+.content {
+    margin-top: 5em;
+    font-size: 2em;
+    margin-left: 15%;
+    margin-right: 15%;
+}
