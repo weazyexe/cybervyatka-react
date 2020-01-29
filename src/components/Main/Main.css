@@ -4,13 +4,6 @@
     margin-top: 20vh;
 }
 
-.foreground {
-    padding: 2em;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}
-
 .header-text {
     font-size: 3em;
     letter-spacing: 2em;
@@ -39,4 +32,20 @@
     font-size: 2em;
     margin-left: 15%;
     margin-right: 15%;
+}
+
+.digit {
+    font-size: 1.5em;
+    color: #385d77;
+    font-weight: 300;
+}
+
+.digit-title {
+    font-size: 1em;
+    color: #222222;
+    font-weight: 300;
+}
+
+.photo {
+    width: 30%;
 }

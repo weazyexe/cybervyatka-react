@@ -1,14 +1,16 @@
 import React from "react";
 import MainState from "../../stores/Main/MainState";
 import {inject, observer} from "mobx-react";
-import {Container} from "react-bootstrap";
 
 import logo from './../../assets/logo_colored_blue.png';
 import './Main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {randomBytes} from "crypto";
 import {randomNumber} from "../../utils/utils";
 import {CircularProgress} from "@material-ui/core";
+import Dates from "./Dates";
+import Header from "./Header";
+import Digits from "./Digits";
+import Media from "./Media";
 
 @inject("mainState")
 @observer
@@ -22,19 +24,23 @@ export default class Main extends React.Component<MainProps, State> {
             },
             message: 'stay tuned.',
             allMessages: [
-                'сюдаа.',
-                'следующий.',
-                'скоро.',
-                'скюё хкйор.',
-                'ланы.',
-                'csgo <3',
-                'dota <3',
-                'react <3',
-                'by weazyexe.',
-                'stay tuned.',
-                'поди ещё раз наведешь на логотип?)',
-                'давай ещё',
-                'хех)))'
+                'february',
+                'февруари',
+                'februar',
+                'febreiro',
+                'Φεβρουάριος',
+                'luty',
+                'fevereiro',
+                'unor',
+                'veebruar',
+                'fevral',
+                'ফেব্রুয়ারি',
+                '二月',
+                'Lub ob hlis ntuj',
+                'فبراير' ,
+                'февраль',
+                'februarii',
+                'februaro'
             ]
         };
     }
@@ -72,59 +78,21 @@ export default class Main extends React.Component<MainProps, State> {
 
         if (this.props.mainState.settings.isAnnounced) {
             return(
-                <div className='foreground'>
-                    <div className='header text-center'>
-                        <div>
-                            <img className='logo mx-auto' src={logo} alt='cv logo' />
-                        </div>
+                <div className='parallax'>
+                    <div className='foreground parallax__layer parallax__layer--back'/>
 
-                        <div className='header-text mt-5'>
-                            CYBERVYATKA
-                        </div>
-
-                        <div className='accent-text mt-2'>
-                            Киберспортивный турнир в Кирове
-                        </div>
-                    </div>
-
-                    <div className='content text-center'>
-                        <div className='accent-text'>
-                            CYBERVYATKA - это киберспортивный турнир в городе Кирове, проводящийся с 2018 года в ВятГУ
-                        </div>
-                    </div>
-
-                    <div className='content text-center'>
-                        <div className='small-text'>
-                            Регистрация
-                        </div>
-                        <div className='accent-text'>
-                            N февраля - N марта
-                        </div>
-                        <div className='small-text mt-5'>
-                            Групповой этап
-                        </div>
-                        <div className='accent-text'>
-                            N марта - N марта
-                        </div>
-                        <div className='small-text mt-5'>
-                            Плей-офф этап
-                        </div>
-                        <div className='accent-text'>
-                            N марта - N марта
-                        </div>
-                        <div className='small-text mt-5'>
-                            LAN-финалы
-                        </div>
-                        <div className='accent-text'>
-                            N и N марта
-                        </div>
+                    <div className='parallax__layer parallax__layer--base'>
+                        <Header/>
+                        <Dates/>
+                        <Digits/>
+                        <Media/>
                     </div>
                 </div>
             );
         }
 
         return (
-            <div className='foreground text-center'>
+            <div className='text-center'>
                 <div>
                     <img onMouseOver={() => this.moveLogo()} style={this.state.style} className='logo mx-auto' src={logo} alt='cv logo' />
                 </div>
