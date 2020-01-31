@@ -2,8 +2,11 @@ import React from "react";
 import MainState from "../../stores/Main/MainState";
 import {inject, observer} from "mobx-react";
 
+import ym from 'react-yandex-metrika';
+
 import logo from './../../assets/logo_colored_blue.png';
 import './Main.css';
+import '../../styles/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {randomNumber} from "../../utils/utils";
 import {CircularProgress} from "@material-ui/core";
@@ -11,6 +14,7 @@ import Dates from "./Dates";
 import Header from "./Header";
 import Digits from "./Digits";
 import Media from "./Media";
+import Description from "./Description";
 
 @inject("mainState")
 @observer
@@ -47,6 +51,7 @@ export default class Main extends React.Component<MainProps, State> {
 
 
     async componentDidMount() {
+        ym('hit', '/');
         await this.props.mainState.getTournamentSettings();
     }
 
@@ -83,6 +88,7 @@ export default class Main extends React.Component<MainProps, State> {
 
                     <div className='parallax__layer parallax__layer--base'>
                         <Header/>
+                        <Description/>
                         <Dates/>
                         <Digits/>
                         <Media/>

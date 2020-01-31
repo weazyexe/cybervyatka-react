@@ -10,25 +10,25 @@ const Dates = () => {
                 Регистрация
             </div>
             <div className='accent-text'>
-                N февраля - N марта
+                2 - 7 марта
             </div>
             <div className='small-text mt-5'>
                 Групповой этап
             </div>
             <div className='accent-text'>
-                N марта - N марта
+                14 марта
             </div>
             <div className='small-text mt-5'>
                 Плей-офф этап
             </div>
             <div className='accent-text'>
-                N марта - N марта
+                15 марта
             </div>
             <div className='small-text mt-5'>
                 LAN-финалы
             </div>
             <div className='accent-text'>
-                N и N марта
+                21 марта
             </div>
         </div>
     );

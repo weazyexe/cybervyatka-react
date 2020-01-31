@@ -4,48 +4,227 @@
     margin-top: 20vh;
 }
 
-.header-text {
-    font-size: 3em;
-    letter-spacing: 2em;
-    margin-left: 2em;
-    color: #385d77;
-    font-weight: 300;
+@media (min-width: 1600px) {
+    .header-text {
+        font-size: 3em;
+        letter-spacing: 2em;
+        margin-left: 2em;
+        color: #385d77;
+        font-weight: 300;
+    }
+
+    .accent-text {
+        font-weight: 300;
+        font-size: 1.5em;
+    }
+
+    .small-text {
+        font-size: 0.8em;
+        color: #6f9dec;
+        font-weight: 300;
+    }
+
+    .content {
+        margin-top: 5em;
+        font-size: 2em;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .digit {
+        font-size: 1.5em;
+        color: #385d77;
+        font-weight: 300;
+    }
+
+    .digit-title {
+        font-size: 1em;
+        color: #222222;
+        font-weight: 300;
+    }
+
+    .photo {
+        width: 30%;
+    }
 }
 
-.accent-text {
-    font-weight: 300;
-    font-size: 1.5em;
+@media (min-width: 1100px) and (max-width: 1600px) {
+    .header-text {
+        font-size: 2em;
+        letter-spacing: 2em;
+        margin-left: 2em;
+        color: #385d77;
+        font-weight: 300;
+    }
+
+    .accent-text {
+        font-weight: 300;
+        font-size: 1.5em;
+    }
+
+    .small-text {
+        font-size: 0.8em;
+        color: #6f9dec;
+        font-weight: 300;
+    }
+
+    .content {
+        margin-top: 5em;
+        font-size: 2em;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .digit {
+        font-size: 1.5em;
+        color: #385d77;
+        font-weight: 300;
+    }
+
+    .digit-title {
+        font-size: 1em;
+        color: #222222;
+        font-weight: 300;
+    }
+
+    .photo {
+        width: 30%;
+    }
 }
 
-.small-text {
-    font-size: 0.8em;
-    color: #6f9dec;
-    font-weight: 300;
+@media (min-width: 600px) and (max-width: 1100px) {
+    .header-text {
+        font-size: 2em;
+        letter-spacing: 1.3em;
+        margin-left: 1.3em;
+        color: #385d77;
+        font-weight: 300;
+    }
+
+    .accent-text {
+        font-weight: 300;
+        font-size: 1.5em;
+    }
+
+    .small-text {
+        font-size: 0.8em;
+        color: #6f9dec;
+        font-weight: 300;
+    }
+
+    .content {
+        margin-top: 5em;
+        font-size: 2em;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .digit {
+        font-size: 1.5em;
+        color: #385d77;
+        font-weight: 300;
+    }
+
+    .digit-title {
+        font-size: 1em;
+        color: #222222;
+        font-weight: 300;
+    }
+
+    .photo {
+        width: 30%;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 600px) {
+    .header-text {
+        font-size: 1.7em;
+        letter-spacing: 0.7em;
+        margin-left: 0.7em;
+        color: #385d77;
+        font-weight: 300;
+    }
+
+    .accent-text {
+        font-weight: 300;
+        font-size: 1.5em;
+    }
+
+    .small-text {
+        font-size: 0.8em;
+        color: #6f9dec;
+        font-weight: 300;
+    }
+
+    .content {
+        margin-top: 5em;
+        font-size: 2em;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .digit {
+        font-size: 1.5em;
+        color: #385d77;
+        font-weight: 300;
+    }
+
+    .digit-title {
+        font-size: 1em;
+        color: #222222;
+        font-weight: 300;
+    }
+
+    .photo {
+        width: 30%;
+    }
+}
+
+@media (min-width: 250px) and (max-width: 420px) {
+    .header-text {
+        font-size: 1.5em;
+        letter-spacing: 0.7em;
+        margin-left: 0.7em;
+        color: #385d77;
+        font-weight: 300;
+    }
+
+    .accent-text {
+        font-weight: 300;
+        font-size: 1em;
+    }
+
+    .small-text {
+        font-size: 0.8em;
+        color: #6f9dec;
+        font-weight: 300;
+    }
+
+    .content {
+        margin-top: 5em;
+        font-size: 2em;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .digit {
+        font-size: 1.5em;
+        color: #385d77;
+        font-weight: 300;
+    }
+
+    .digit-title {
+        font-size: 1em;
+        color: #222222;
+        font-weight: 300;
+    }
+
+    .photo {
+        width: 50%;
+    }
 }
 
 .header {
     margin-top: 1em;
 }
 
-.content {
-    margin-top: 5em;
-    font-size: 2em;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-.digit {
-    font-size: 1.5em;
-    color: #385d77;
-    font-weight: 300;
-}
-
-.digit-title {
-    font-size: 1em;
-    color: #222222;
-    font-weight: 300;
-}
-
-.photo {
-    width: 30%;
-}

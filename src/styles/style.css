@@ -5,7 +5,9 @@ body {
     margin: 0;
     overflow-x: hidden;
 
-
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
 }
 
 .foreground {
@@ -13,6 +15,7 @@ body {
     background-size: cover;
     /*background-position: center;*/
     background-repeat: no-repeat;
+    height: 300vh;
 }
 
 .parallax {
@@ -33,4 +36,14 @@ body {
 }
 .parallax__layer--back {
     transform: translateZ(-1px) scale(2.7);
+}
+
+.py-5 {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.video {
+    height: 40vw;
+    width: 100%;
 }

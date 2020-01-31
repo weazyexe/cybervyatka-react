@@ -23,7 +23,7 @@ const Media = () => {
             <div className='accent-text text-center mb-5'>
                 Какими были прошлые сезоны
             </div>
-            <Container fluid className='mx-auto'>
+            <div className='mx-auto'>
                 <Row className='m-0'>
                     <div className='text-center'>
                         <img src={photo1} alt='photo1' className='photo'/>
@@ -40,15 +40,15 @@ const Media = () => {
                         <img src={photo12} alt='photo12' className='photo'/>
                     </div>
                 </Row>
-                <Col md={12} className='text-center mt-5'>
-                    <iframe title='about cv3' width="900" height="500" className="mb-5" frameBorder="0"
+                <div className='text-center mt-5'>
+                    <iframe title='about cv3' width="900" height="500" className="mb-5 video" frameBorder="0"
                             src="https://youtube.com/embed/IexOyKfihs8">
                     </iframe>
-                    <iframe title='about cv2' width="900" height="500" className="mb-5" frameBorder="0"
+                    <iframe title='about cv2' width="900" height="500" className="mb-5 video" frameBorder="0"
                             src="https://youtube.com/embed/HOK3qOUU8eA?start=28">
                     </iframe>
-                </Col>
-            </Container>
+                </div>
+            </div>
         </div>
     );
 };
