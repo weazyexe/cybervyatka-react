@@ -15,6 +15,7 @@ import Header from "./Header";
 import Digits from "./Digits";
 import Media from "./Media";
 import Description from "./Description";
+import Footer from "./Footer";
 
 @inject("mainState")
 @observer
@@ -92,6 +93,7 @@ export default class Main extends React.Component<MainProps, State> {
                         <Dates/>
                         <Digits/>
                         <Media/>
+                        <Footer/>
                     </div>
                 </div>
             );
