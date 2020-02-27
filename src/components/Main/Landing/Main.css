@@ -4,6 +4,22 @@
     margin-top: 20vh;
 }
 
+.partner-logo {
+    width: 7em;
+    height: 4.5em;
+    padding: 1em;
+    transition: box-shadow 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+    border-radius: 1em;
+}
+
+.partner-logo:hover {
+    -webkit-box-shadow: 2px 3px 61px -20px rgba(0,0,0,0.38);
+    -moz-box-shadow: 2px 3px 61px -20px rgba(0,0,0,0.38);
+    box-shadow: 2px 3px 61px -20px rgba(0,0,0,0.38);
+    width: 8em;
+    height: 5em;
+}
+
 @media (min-width: 1600px) {
     .header-text {
         font-size: 3em;

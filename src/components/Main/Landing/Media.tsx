@@ -2,20 +2,20 @@ import React from "react";
 
 import './Main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Col, Container, Row} from "react-bootstrap";
+import {Row} from "react-bootstrap";
 
-import photo1 from '../../assets/photo1.jpg';
-import photo2 from '../../assets/photo2.jpg';
-import photo3 from '../../assets/photo3.jpg';
-import photo4 from '../../assets/photo4.jpg';
-import photo5 from '../../assets/photo5.jpg';
-import photo6 from '../../assets/photo6.jpg';
-import photo7 from '../../assets/photo7.jpg';
-import photo8 from '../../assets/photo8.jpg';
-import photo9 from '../../assets/photo9.jpg';
-import photo10 from '../../assets/photo10.jpg';
-import photo11 from '../../assets/photo11.jpg';
-import photo12 from '../../assets/photo12.jpg';
+import photo1 from '../../../assets/photo1.jpg';
+import photo2 from '../../../assets/photo2.jpg';
+import photo3 from '../../../assets/photo3.jpg';
+import photo4 from '../../../assets/photo4.jpg';
+import photo5 from '../../../assets/photo5.jpg';
+import photo6 from '../../../assets/photo6.jpg';
+import photo7 from '../../../assets/photo7.jpg';
+import photo8 from '../../../assets/photo8.jpg';
+import photo9 from '../../../assets/photo9.jpg';
+import photo10 from '../../../assets/photo10.jpg';
+import photo11 from '../../../assets/photo11.jpg';
+import photo12 from '../../../assets/photo12.jpg';
 
 const Media = () => {
     return(

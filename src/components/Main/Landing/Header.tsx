@@ -3,7 +3,7 @@ import React from "react";
 import './Main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import logo from './../../assets/logo_colored_blue.png';
+import logo from './../../../assets/logo_colored_blue.png';
 
 const Header = () => {
     return(

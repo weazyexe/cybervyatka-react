@@ -1,21 +1,23 @@
 import React from "react";
-import MainState from "../../stores/Main/MainState";
+import MainState from "../../../stores/Main/MainState";
 import {inject, observer} from "mobx-react";
 
 import ym from 'react-yandex-metrika';
 
-import logo from './../../assets/logo_colored_blue.png';
+import { randomNumber } from "../../../utils/utils";
+
+import logo from '../../../assets/logo_colored_blue.png';
 import './Main.css';
-import '../../styles/style.css';
+import '../../../styles/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {randomNumber} from "../../utils/utils";
 import {CircularProgress} from "@material-ui/core";
 import Dates from "./Dates";
 import Header from "./Header";
 import Digits from "./Digits";
 import Media from "./Media";
 import Description from "./Description";
-import Footer from "./Footer";
+import Footer from "../../App/Footer";
+import Partners from "./Partners";
 
 @inject("mainState")
 @observer
@@ -53,6 +55,7 @@ export default class Main extends React.Component<MainProps, State> {
 
     async componentDidMount() {
         ym('hit', '/');
+        this.props.mainState.getPartners();
         await this.props.mainState.getTournamentSettings();
     }
 
@@ -73,8 +76,10 @@ export default class Main extends React.Component<MainProps, State> {
 
     render() {
         document.title = "Главная страница - CYBERVYATKA";
+        const { partners, isLoading, settings, isPartnersLoading } = this.props.mainState;
+        const { message } = this.state;
 
-        if (this.props.mainState.isLoading) {
+        if (isLoading) {
             return (
                 <div className='foreground text-center py-5'>
                     <CircularProgress />
@@ -82,7 +87,7 @@ export default class Main extends React.Component<MainProps, State> {
             );
         }
 
-        if (this.props.mainState.settings.isAnnounced) {
+        if (settings.isAnnounced) {
             return(
                 <div className='parallax'>
                     <div className='foreground parallax__layer parallax__layer--back'/>
@@ -90,6 +95,7 @@ export default class Main extends React.Component<MainProps, State> {
                     <div className='parallax__layer parallax__layer--base'>
                         <Header/>
                         <Description/>
+                        <Partners partners={partners} isLoading={isPartnersLoading}/>
                         <Dates/>
                         <Digits/>
                         <Media/>
@@ -105,7 +111,7 @@ export default class Main extends React.Component<MainProps, State> {
                     <img onMouseOver={() => this.moveLogo()} style={this.state.style} className='logo mx-auto' src={logo} alt='cv logo' />
                 </div>
                 <div className='accent-text py-3'>
-                    {this.state.message}
+                    {message}
                 </div>
             </div>
         );

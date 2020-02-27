@@ -1,16 +1,15 @@
 import React from "react";
 
 import {Provider} from "mobx-react";
-import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import Main from "../Main/Main";
+import Main from "../Main/Landing/Main";
 import MainState from "../../stores/Main/MainState";
 import {YMInitializer} from "react-yandex-metrika";
 import Auth from "../Admin/Auth";
 import AuthState from "../../stores/Admin/AuthState";
 import {createMuiTheme, ThemeProvider} from "@material-ui/core";
-import Footer from "../Main/Footer";
-import NotFound from "../Main/NotFound";
+import NotFound from "./NotFound";
 
 const mainState = new MainState();
 const authState = new AuthState();

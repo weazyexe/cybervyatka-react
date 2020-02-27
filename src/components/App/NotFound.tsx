@@ -2,7 +2,7 @@ import React from "react";
 
 import logo from '../../assets/logo_colored_blue.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Main.css';
+import '../Main/Landing/Main.css';
 import {inject, observer} from "mobx-react";
 import MainState from "../../stores/Main/MainState";
 import {Link} from "react-router-dom";

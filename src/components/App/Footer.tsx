@@ -2,7 +2,7 @@ import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Main.css'
+import '../Main/Landing/Main.css'
 
 import wzLogo from '../../assets/wz.png';
 import cvLogo from '../../assets/logo_colored_blue.png';
