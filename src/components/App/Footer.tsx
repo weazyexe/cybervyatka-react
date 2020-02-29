@@ -15,7 +15,7 @@ const Footer = () => {
                     <Link to='/about' style={{textDecoration: 'none'}} className="ml-auto mr-auto">
                         <p className="text-link">О турнире</p>
                     </Link>
-                    <Link to="/our_squad" style={{textDecoration: 'none'}} className="ml-auto mr-auto">
+                    <Link to='/staff' style={{textDecoration: 'none'}} className="ml-auto mr-auto">
                         <p className="text-link">Организаторы</p>
                     </Link>
                     <p className="text-link ml-auto mr-auto">Баг-репорт</p>

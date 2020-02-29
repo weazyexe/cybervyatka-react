@@ -3,16 +3,23 @@ import React from "react";
 import {Provider} from "mobx-react";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import Main from "../Main/Landing/Main";
-import MainState from "../../stores/Main/MainState";
 import {YMInitializer} from "react-yandex-metrika";
-import Auth from "../Admin/Auth";
+
 import AuthState from "../../stores/Admin/AuthState";
-import {createMuiTheme, ThemeProvider} from "@material-ui/core";
+import MainState from "../../stores/Main/MainState";
+import StaffState from "../../stores/Main/StaffState";
+
+import Auth from "../Admin/Auth";
 import NotFound from "./NotFound";
+import About from "../Main/About/About";
+import Staff from "../Main/Staff/Staff";
+import Main from "../Main/Landing/Main";
+
+import {createMuiTheme, ThemeProvider} from "@material-ui/core";
 
 const mainState = new MainState();
 const authState = new AuthState();
+const staffState = new StaffState();
 
 const theme = createMuiTheme({
     palette: {
@@ -30,12 +37,14 @@ class App extends React.Component<any, any> {
         return (
             <React.Fragment>
                 <YMInitializer accounts={[55660069]}/>
-                <Provider mainState={mainState} authState={authState}>
+                <Provider mainState={mainState} authState={authState} staffState={staffState}>
                     <ThemeProvider theme={theme}>
                         <BrowserRouter>
                             <Switch>
                                 <Route exact path="/" component={Main} />
-                                <Route exact path="/auth" component={Auth} />
+                                <Route path="/auth" component={Auth} />
+                                <Route path="/about" component={About}/>
+                                <Route path="/staff" component={Staff}/>
                                 <Route component={NotFound}/>
                             </Switch>
                         </BrowserRouter>

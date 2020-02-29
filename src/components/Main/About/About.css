@@ -1,0 +1,44 @@
+ul {
+    list-style: none;
+}
+ul li::before {
+    content: '\2022';
+    color: #6f9dec;
+    margin-right: 1em;
+}
+.logo {
+    width: 7em;
+    height: 7em;
+}
+.text-colored {
+    color: #6f9dec;
+}
+.text-weight {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 720px) {
+    .text {
+        font-size: 2.2em;
+        margin-bottom: 0;
+        margin-top: 1em;
+        text-align: start;
+    }
+    .text-list {
+        font-size: 1.5em;
+        text-align: start;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .text {
+        font-size: 1.5em;
+        margin-bottom: 0;
+        margin-top: 1em;
+        text-align: start;
+    }
+    .text-list {
+        font-size: 1.3em;
+        text-align: start;
+    }
+}

@@ -1,6 +1,7 @@
 import TournamentSettings from "../model/TournamentSettings";
 import {firestore, storage} from "./firebase/firebase";
 import Partner from "../model/Partner";
+import Person from "../model/Person";
 
 export default class Repository {
     async getTournamentSettings(): Promise<TournamentSettings> {
@@ -27,5 +28,24 @@ export default class Repository {
         }
 
         return partners;
+    }
+
+    async getStaff(): Promise<Person[]> {
+        const docs = (await firestore.collection('cybervyatka/tournament/staff').get()).docs;
+        const staff: Person[] = [];
+
+        for (const doc of docs) {
+            const docData = doc.data();
+            const photoLink = await storage.ref(docData.photo).getDownloadURL();
+            staff.push({
+                id: docData.id,
+                name: docData.name,
+                photo: photoLink,
+                rank: docData.rank,
+                contacts: docData.contacts
+            });
+        }
+
+        return staff;
     }
 }

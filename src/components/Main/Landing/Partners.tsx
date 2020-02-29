@@ -25,7 +25,7 @@ const Partners = (props: PartnersProps) => {
                 :
                 <Row className='mt-2'>
                     {partners.map(partner =>
-                        <img src={partner.logo} alt={partner.title} className='mx-auto partner-logo' />)}
+                        <img key={partner.id} src={partner.logo} alt={partner.title} className='mx-auto partner-logo' />)}
                 </Row>
             }
         </div>

@@ -1,0 +1,44 @@
+.text-colored {
+    color: #6f9dec;
+}
+.text-weight {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 720px) {
+    .text {
+        font-size: 2.2em;
+        margin-bottom: 0;
+        margin-top: 1em;
+        text-align: start;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .text {
+        font-size: 1.5em;
+        margin-bottom: 0;
+        margin-top: 1em;
+        text-align: start;
+    }
+}
+
+.name-text {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 0;
+    margin-top: 1em;
+}
+.position-text {
+    color: #333;
+}
+.staff-avatar {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+}
+.staff-link {
+    width: 1em;
+    height: 1em;
+    margin: 0.3em;
+}
