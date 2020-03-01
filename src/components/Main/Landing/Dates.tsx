@@ -16,13 +16,13 @@ const Dates = () => {
                 Групповой этап
             </div>
             <div className='accent-text'>
-                14 марта
+                12-13 марта
             </div>
             <div className='small-text mt-5'>
                 Плей-офф этап
             </div>
             <div className='accent-text'>
-                15 марта
+                14-15 марта
             </div>
             <div className='small-text mt-5'>
                 LAN-финалы
